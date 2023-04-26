@@ -1,11 +1,18 @@
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
+import toast from 'react-hot-toast';
 import { addContact } from 'redux/contacts/operations';
-import { selectContacts } from 'redux/contacts/selectors';
+import { useContacts } from 'hooks/useContacts';
 import { NameInput, TelInput, SubmitButton } from './FormElements';
 
 export default function ContactForm() {
   const dispatch = useDispatch();
-  const contacts = useSelector(selectContacts);
+  const { contacts } = useContacts();
+  const toastStyle = {
+    borderRadius: '10px',
+    border: '3px solid #3f51b5',
+    background: 'gray',
+    color: '#fff',
+  };
 
   const handleSubmit = e => {
     e.preventDefault();
@@ -17,7 +24,9 @@ export default function ContactForm() {
     contacts.some(
       contact => contact.name.toLowerCase() === data.name.toLowerCase()
     )
-      ? alert(`${data.name} is already in contacts!`)
+      ? toast(`${data.name} is already in contacts!`, {
+          style: toastStyle,
+        })
       : dispatch(addContact(data));
     form.reset();
   };

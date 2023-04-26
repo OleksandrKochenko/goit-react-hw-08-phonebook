@@ -1,9 +1,8 @@
-import { useSelector } from 'react-redux';
-import { selectFiltredContacts } from '../../redux/contacts/selectors';
+import { useContacts } from 'hooks/useContacts';
 import ContactItem from './ContactItem';
 
 export default function ContactList() {
-  const filtredContacts = useSelector(selectFiltredContacts);
+  const { filtredContacts } = useContacts();
 
   return (
     <ul style={{ margin: '0' }}>

@@ -1,5 +1,6 @@
 import { useDispatch } from 'react-redux';
 import { useEffect } from 'react';
+import { Helmet } from 'react-helmet';
 import { fetchContacts } from '../redux/contacts/operations';
 import ContactList from 'components/Contacts/ContactList';
 import Filter from 'components/Filter/Filter';
@@ -13,7 +14,10 @@ export default function Home() {
   }, [dispatch]);
 
   return (
-    <div>
+    <div style={{ padding: '0 40px' }}>
+      <Helmet>
+        <title>Contacts</title>
+      </Helmet>
       <h1>Contacts page</h1>
       <ContactForm />
       <Filter />
