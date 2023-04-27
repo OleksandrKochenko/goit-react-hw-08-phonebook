@@ -3,7 +3,7 @@ import { RegisterForm } from '../components/RegistrationForm/RegistrationForm';
 
 export default function Register() {
   return (
-    <div style={{ padding: '0 40px' }}>
+    <div style={{ padding: '0 40px', textAlign: 'center' }}>
       <Helmet>
         <title>Registration</title>
       </Helmet>

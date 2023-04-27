@@ -14,7 +14,7 @@ export default function Home() {
   }, [dispatch]);
 
   return (
-    <div style={{ padding: '0 40px' }}>
+    <div style={{ padding: '0 40px', textAlign: 'center' }}>
       <Helmet>
         <title>Contacts</title>
       </Helmet>

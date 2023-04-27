@@ -1,0 +1,42 @@
+.contacts_list {
+  margin: 20px 0;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.contact_item + .contact_item {
+  border-top: 1px solid #2f2f3760;
+}
+
+.contact_item {
+  display: flex;
+  width: 60%;
+  align-items: center;
+  height: 30px;
+  padding: 5px;
+  text-align: left;
+}
+
+.delete_button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding-top: 6px;
+  justify-self: flex-end;
+  color: brown;
+}
+
+.name {
+  width: 55%;
+}
+
+.tel {
+  width: 40%;
+}
+
+.devider {
+  margin: 0 20px;
+  color: #2f2f3760;
+}

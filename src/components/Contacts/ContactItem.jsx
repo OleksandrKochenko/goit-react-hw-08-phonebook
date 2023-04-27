@@ -2,6 +2,7 @@ import { MdOutlineDeleteForever } from 'react-icons/md';
 import { useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
 import { deleteContact } from 'redux/contacts/operations';
+import css from './Contacts.module.css';
 
 export default function ContactItem({ contact }) {
   const dispatch = useDispatch();
@@ -9,13 +10,15 @@ export default function ContactItem({ contact }) {
 
   return (
     <>
-      {contact.name}: {contact.number}
+      <span className={css.name}>
+        <b>name: </b> {contact.name}
+      </span>
+      <span className={css.devider}>:</span>
+      <span className={css.tel}>
+        <b>phone: </b> {contact.number}
+      </span>
       <button
-        style={{
-          background: 'none',
-          border: 'none',
-          cursor: 'pointer',
-        }}
+        className={css.delete_button}
         type="button"
         onClick={handleDelete}
       >

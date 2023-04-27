@@ -3,6 +3,7 @@ import toast from 'react-hot-toast';
 import { addContact } from 'redux/contacts/operations';
 import { useContacts } from 'hooks/useContacts';
 import { NameInput, TelInput, SubmitButton } from './FormElements';
+import css from './Form.module.css';
 
 export default function ContactForm() {
   const dispatch = useDispatch();
@@ -32,17 +33,13 @@ export default function ContactForm() {
   };
 
   return (
-    <form
-      style={{ border: '1px solid black', padding: '20px', width: '400px' }}
-      onSubmit={handleSubmit}
-    >
-      <NameInput />
-      <br />
-      <br />
-      <TelInput />
-      <br />
-      <br />
-      <SubmitButton />
+    <form className={css.form} onSubmit={handleSubmit}>
+      <h3>Create new contact:</h3>
+      <div className={css.inputs_field}>
+        <NameInput />
+        <TelInput />
+        <SubmitButton />
+      </div>
     </form>
   );
 }

@@ -1,0 +1,45 @@
+.form {
+  margin: 10px auto 20px auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.inputs_field {
+  display: flex;
+  margin-left: 30px;
+  align-items: center;
+  justify-content: left;
+}
+
+.contact_element {
+  margin: 0 10px;
+}
+
+.button {
+  width: 100px;
+  height: 35px;
+  margin: 0 10px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #3f51b5;
+  border-radius: 5px;
+  border: 2px solid #3f51b5;
+  box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2),
+    0px 4px 5px 0px rgba(0, 0, 0, 0.14);
+}
+
+.button:hover {
+  cursor: pointer;
+  transform: translate(1px, 1px);
+}
+
+.contact_input {
+  width: 220px;
+  height: 30px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: none;
+  box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2),
+    0px 4px 5px 0px rgba(0, 0, 0, 0.14);
+}
